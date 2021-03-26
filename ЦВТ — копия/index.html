@@ -1,0 +1,56 @@
+<!DOCTYPE html5>
+<html lang="ru" >
+    <head>
+        <meta charset="utf-8">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <script src="C:\Users\Хозяин\Desktop\ЦВТ — копия\js\js.js"></script>
+        <title>Задание3</title>
+    </head>
+    <body>
+       
+        <div>
+            <div class="container1">
+            <h1>Авторизация</h1>
+        </div>
+        <div class="container2">
+            <form>
+                <div class="dws-input">
+                <input type="email" name="user" placeholder="Введите email" required>
+                </div>
+                <div class="dws-input">
+                <input type="password" name="password" placeholder="Введите пароль" title="пароль должен состоять не менее чем из 6 символов и использованием цифр, латинских букв разных регистров, и спецсимволов (!@#$%^&*+`~=?\|<>/.,-_;:)" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*?[!@#$%^&*+`~=?\|<>/.,-_;:]).{6,}" required>
+                </div>
+                <input class="dws-submit" type="submit" name="submit" value="Войти">
+            </form>
+        </div>    
+            <div id="date">
+            <script language="javascript" type="text/javascript">
+                var d = new Date();
+                var day=new Array("Воскресенье","Понедельник","Вторник",
+                "Среда","Четверг","Пятница","Суббота");
+                 var month=new Array("января","февраля","марта","апреля","мая","июня",
+                "июля","августа","сентября","октября","ноября","декабря");
+                 document.write(day[d.getDay()]+" " +d.getDate()+ " " + month[d.getMonth()] 
+                + " " + d.getFullYear() + " г.");
+                </script>
+                </div>
+        <div id="timer"></div>
+            <script language="javascript" type="text/javascript">
+                function isInternetExplorer() {
+                return window.navigator.userAgent.indexOf('MSIE ') > -1 || window.navigator.userAgent.indexOf('Trident/') > -1;
+                }
+                if (isInternetExplorer() == true) {
+                alert('Вы используете не тот браузер');
+                } 
+               </script>
+    </body>
+</html> 
+<!--Дата
+getDate() - возвращает число от 1 до 31, число месяца
+getDay() - возвращает день недели как целое число от 0 (воскресенье) до 6 (суббота)
+getMonth() - возвращает номер месяца в году
+getFullYear() - возвращает год. Если использовать просто getYear(), то будет выводиться текущий год минус 1900-->
+<!--Проверка браузера на IE
+function isInternetExplorer() - Данная функция возвращает значение (true/false) если браузер Interen Explorer/ /не Internet Explorer любой версии
+if(...) - Выполняет условие вывода alert, если используется Internet Explorer
+-->
